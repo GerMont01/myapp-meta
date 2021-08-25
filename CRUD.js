@@ -65,19 +65,18 @@ class SimpleCrudDB {
     flushDB() {
         // flush the inmemoryDatabase to disk (ie: save the database to disk)
         this.fs.writeFile(this.fileName, JSON.stringify(this.inMemoryDatabase) , (err) => {
-            if (err)
-              console.log(err);
-            else {
-              console.log("File written successfully")
-            }})
+          if (err)
+            console.log(err);
+          else {
+            console.log("File written successfully")
+        }})
     }
 
 
-    reloadDB(fileName) {
+    reloadDB() {
         // relead the database from disk
         try {
-            const data = this.fs.readFileSync('./db/mydb.json', 'utf8')
-            return data
+            return this.fs.readFileSync('./db/mydb.json', 'utf8')
           } catch (err) {
             return err
           }
