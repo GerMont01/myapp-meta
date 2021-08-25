@@ -16,21 +16,27 @@ class SimpleCrudDB {
 
     inMemoryDatabase = JSON.parse(this.reloadDB(this.fileName));
 
-    Create(username, password)
+    Create(email, password)
     {
-       // add code to store a record in your database
-        if (this.Read(username)) {
-            return false
-        } else {
-            this.inMemoryDatabase.push({username: username, password: password})
-        }
-        // return true if success, false if not
-    
+      // add code to store a record in your database
+      if (!email || !password){
+         return false
+      }
+      if (this.Read(email)) {
+          return false
+      } else {
+          this.inMemoryDatabase.push({email: email, password: password})
+          return true
+      }
+      // return true if success, false if not
     };
 
-    Read(username) {
+    Read(email) {
       // add code to read record from database
-      let findUser = this.inMemoryDatabase.find(user => user.username === username)
+      if (!email) {
+        return false
+      }
+      let findUser = this.inMemoryDatabase.find(user => user.email === email)
       if (findUser) {
         return findUser
       } else {
@@ -41,24 +47,39 @@ class SimpleCrudDB {
 
 
 
-    Update(username, newRecordData) {
+    Update(email, newRecordData) {
        // add code to update a record in the database
+      let res = false;
+      this.inMemoryDatabase.find(user => {
+        if(user.email === email){
+          
+          if (newRecordData.username) user.username = newRecordData.username
+          if (newRecordData.password) user.password = newRecordData.password
+          res = true
 
-
+        } else {
+          res= false
+        }
+      })
+      return res
        // return true if success, false if not
 
 
     };
 
 
-    Delete(username)
+    Delete(email)
     {
-     // add code to delete a user in the database
-
-
+      // add code to delete a user in the database
+      this.inMemoryDatabase.find(user => {
+        if(user.email === email){
+          this.inMemoryDatabase[this.inMemoryDatabase.indexOf(user)] = {}
+          return true
+        } else {
+          return false
+        }
+      })
     // return true if success, false if not
-
-
     };
 
 
@@ -84,7 +105,5 @@ class SimpleCrudDB {
     }
 }
 
-
-let db = new SimpleCrudDB('./db/mydb.json')
-db.Create('Gerardo2','passssssword2')
-db.flushDB()
+const crud = new SimpleCrudDB('./db/mydb.json')
+exports.crud = crud;
