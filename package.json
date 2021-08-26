@@ -1,0 +1,21 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "\"# myapp-meta\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd myapp-backend && npm start",
+    "start-client": "cd myapp-frontend && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GerMont01/myapp-meta.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GerMont01/myapp-meta/issues"
+  },
+  "homepage": "https://github.com/GerMont01/myapp-meta#readme"
+}
