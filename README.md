@@ -31,6 +31,6 @@ Now to get the project running:
   Open two terminals and go inside the main folder on each and run:
   
   To initialize server (in one terminal): npm start <br/>
-  To initialize client (in the second terminal): npm start-client
+  To initialize client (in the second terminal): npm run start-client
   
 Project is running now!
