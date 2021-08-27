@@ -12,14 +12,14 @@ Now to get the project running:
 
 - Step 1: Create a folder and add 2 more folders inside. One for the Frontend and one for the Backend.
   
-  Main folder
-    -Frontend
+  Main folder <br/>
+    -Frontend <br/>
     -Backend
     
 - Step 2: Clone all the repositories in their corresponding folders
 
-  Main folder: git clone https://github.com/GerMont01/myapp-meta.git
-  Frontend: git clone https://github.com/GerMont01/myapp-frontend.git
+  Main folder: git clone https://github.com/GerMont01/myapp-meta.git <br/>
+  Frontend: git clone https://github.com/GerMont01/myapp-frontend.git <br/>
   Backend: git clone https://github.com/GerMont01/myapp-backend.git
   
 - Step 3: Install all modules and dependencies
@@ -30,7 +30,7 @@ Now to get the project running:
 
   Open two terminals and go inside the main folder on each and run:
   
-  To initialize server (in one terminal): npm start 
+  To initialize server (in one terminal): npm start <br/>
   To initialize client (in the second terminal): npm start-client
   
 Project is running now!
