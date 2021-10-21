@@ -1,4 +1,4 @@
-My Restaurant App
+# My Restaurant App
 
 This project uses a mongoDB database, to make it work it is required to have mongo running on port 27017.
 
@@ -10,23 +10,23 @@ One way to do this is by running mongoDB with Docker:
 
 Now to get the project running:
 
-- Step 1: Create a folder and add 2 more folders inside. One for the Frontend and one for the Backend.
+## - Step 1: Create a folder and add 2 more folders inside. One for the Frontend and one for the Backend.
   
   Main folder <br/>
     -Frontend <br/>
     -Backend
     
-- Step 2: Clone all the repositories in their corresponding folders
+## - Step 2: Clone all the repositories in their corresponding folders
 
   Main folder: git clone https://github.com/GerMont01/myapp-meta.git <br/>
   Frontend: git clone https://github.com/GerMont01/myapp-frontend.git <br/>
   Backend: git clone https://github.com/GerMont01/myapp-backend.git
   
-- Step 3: Install all modules and dependencies
+##- Step 3: Install all modules and dependencies
 
   Inside each folder run: npm install
   
-- Step 4: Start project
+## - Step 4: Start project
 
   Open two terminals and go inside the main folder on each and run:
   
